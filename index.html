@@ -81,7 +81,7 @@
     }
 
     // Fetch repositories from PolyExtended GitHub organization
-    const org = 'polyextend';
+    const org = 'polyextended';
     fetch(`https://api.github.com/orgs/${org}/repos`)
       .then(response => response.json())
       .then(repos => {
@@ -89,7 +89,7 @@
         const repoCards = document.getElementById('repo-cards');
 
         // Filter out repositories with specific names
-        const excludedNames = ['.github', 'polyextend.github.io', 'PolyExtend'];
+        const excludedNames = ['.github', 'polyextended.github.io', 'PolyExtended'];
         const filteredRepos = repos.filter(repo => !excludedNames.includes(repo.name));
 
         // Iterate through the repositories and create cards
